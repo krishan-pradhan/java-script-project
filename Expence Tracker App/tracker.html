@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="./tracker.css">
+    <script src="./tracker.js" defer></script>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div id="calculateAmount" class="">
+                <div><h2></h2></div>
+                <div><h3></h3></div>
+            </div>
+            <div class="expense-box">
+                <form id="expenseForm" action="">
+                    <h3>Add New</h3>
+                    <div>
+                        <label for="expenseType">Entry Type</label>
+                        <select name="expenseType" id="expenseType">
+                            <option value="chooseOne">Choose One</option>
+                            <option value="card">Card</option>
+                            <option value="cash">Cash</option>
+                            <option value="cryptocoin">Cryptocoin</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name"  placeholder="Name">
+                    </div>
+                    <div>
+                      <label for="amount">Amount</label>
+                      <input type="number" id="amount" name="amount"  placeholder="Amount">
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date"  placeholder="date">
+                      </div>
+                    <button id="submitButton" type="submit">Submit</button>
+                </form>
+                <div class="show-expense">
+                    <h3>Expenses</h3>
+                    <div class="table-box">
+                    <table id="expenseTable">
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Name</th>
+                                <th>Amount</th>
+                                <th>Date</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody"></tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <script src="./calculator.js" defer></script>
+    <style>
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100dvh;
+            gap: 20px;
+        }
+        section form{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            border: 9px outset gray;
+            width: 400px;
+        }
+        form input, button{
+            height: 40px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <section class="calculator-container">
+        <h2>Bmi Calculator</h2>
+        <form id="calculatorForm" onsubmit="event.preventDefault()" action="">
+            <div>
+                <label for="height">Height: </label>
+                <input type="number" value="" name="height" id="height" placeholder="in cm" required>
+            </div>
+            <div>
+                <label for="weight">Weight: </label>
+                <input type="number" value="" name="weight" id="weight" placeholder="in kg" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div>result: <div class="results"></div></div>
+    </section>
+</body>
+</html>
